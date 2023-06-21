@@ -48,7 +48,17 @@ const config: GatsbyConfig = {
         siteUrl, // Update with your website URL
         trailingSlash: 'always',
         i18nextOptions: {
-          ns: ['index', 'blog', 'book', 'home'],
+          defaultNS: 'index',
+          ns: [
+            'index',
+            'blog.7-habits',
+            'blog.index',
+            'book',
+            'blog.mating-game',
+            'home',
+            'about',
+            'tags',
+          ],
           fallbackLng: 'en',
           interpolation: {
             escapeValue: false, // React already escapes values, so no need to escape again
@@ -230,6 +240,7 @@ const config: GatsbyConfig = {
         openAnalyzer: false,
       },
     },
+    `gatsby-plugin-react-helmet`,
   ].filter(Boolean) as Array<PluginRef>,
 };
 

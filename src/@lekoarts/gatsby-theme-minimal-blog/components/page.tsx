@@ -22,10 +22,15 @@ type PageContext = {
 const Page: React.FC<
   React.PropsWithChildren<PageProps<MBPageProps, PageContext>>
 > = ({ children, data }) => {
-  const ns = data?.page?.ns;
+  const page = data?.page;
+  const ns = page?.ns;
+
   const { t } = useTranslation(ns);
+
+  const title = t('title');
+
   return (
-    <Layout>
+    <Layout title={title} description={page?.excerpt}>
       <Heading as="h2" variant="styles.h2">
         {t('title')}
       </Heading>
@@ -35,7 +40,3 @@ const Page: React.FC<
 };
 
 export default Page;
-
-export const Head: HeadFC<MBPageProps> = ({ data: { page } }) => (
-  <Seo title={page.title} description={page.excerpt} />
-);
