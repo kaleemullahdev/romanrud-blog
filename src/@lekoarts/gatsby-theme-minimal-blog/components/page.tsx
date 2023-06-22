@@ -28,9 +28,10 @@ const Page: React.FC<
   const { t } = useTranslation(ns);
 
   const title = t('title');
+  const description = t('description');
 
   return (
-    <Layout title={title} description={page?.excerpt}>
+    <Layout title={title} description={description}>
       <Heading as="h2" variant="styles.h2">
         {t('title')}
       </Heading>

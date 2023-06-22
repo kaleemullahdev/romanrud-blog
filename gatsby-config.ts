@@ -1,5 +1,8 @@
 import type { GatsbyConfig, PluginRef } from 'gatsby';
 import 'dotenv/config';
+import i18nextConfig from './i18next-config';
+
+const { defaultLanguage, languages, ns } = i18nextConfig;
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 const siteUrl =
@@ -42,28 +45,19 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale',
-        languages: ['uk', 'ru', 'en'], // Add your supported languages here
-        defaultLanguage: 'en', // Set your default language
+        languages, // Add your supported languages here
+        defaultLanguage, // Set your default language
         redirect: true, // Set to true if you want to redirect to the user's preferred language
         siteUrl, // Update with your website URL
         trailingSlash: 'always',
         i18nextOptions: {
           defaultNS: 'index',
-          ns: [
-            'index',
-            'blog.7-habits',
-            'blog.index',
-            'book',
-            'blog.mating-game',
-            'home',
-            'about',
-            'tags',
-          ],
-          fallbackLng: 'en',
+          ns,
+          fallbackLng: defaultLanguage,
           interpolation: {
             escapeValue: false, // React already escapes values, so no need to escape again
           },
-          // debug: true,
+          debug: true,
           keySeparator: '.',
           nsSeparator: false,
         },
