@@ -6,8 +6,8 @@
   "Roman Rud Blog": "Роман Рудь",
   "Блог": "Блог",
   "brief_content": "Краткое содержание",
-  "site_title": "Блог Романа Руда",
-  "default_site_title": "Блог Романа Руда",
+  "seo_site_title": "Блог Романа Руда",
+  "seo_default_site_title": "Блог Романа Руда",
   "book_summary": "Краткое содержание книги",
   "learn_key_ideas": "Изучите ключевые идеи и уроки из книг за 5 минут."
 }

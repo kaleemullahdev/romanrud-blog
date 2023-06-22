@@ -35,7 +35,9 @@ const Seo = ({
   } = site;
 
   const seo = {
-    title: title ? `${title} | ${t('site_title')}` : t('default_site_title'),
+    title: title
+      ? `${title} | ${t('seo_site_title')}`
+      : t('seo_default_site_title'),
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,

@@ -6,8 +6,8 @@
   "Roman Rud Blog": "Roman Rud",
   "Блог": "Blog",
   "brief_content": "Brief content",
-  "site_title": "Roman Rud Blog",
-  "default_site_title": "Roman Rud Blog",
+  "seo_site_title": "Roman Rud Blog",
+  "seo_default_site_title": "Roman Rud Blog",
   "book_summary": "Summary of the book",
   "learn_key_ideas": "Learn key ideas and lessons from books in 5 minutes."
 }
