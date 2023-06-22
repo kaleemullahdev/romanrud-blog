@@ -57,7 +57,7 @@ const config: GatsbyConfig = {
           interpolation: {
             escapeValue: false, // React already escapes values, so no need to escape again
           },
-          debug: true,
+          // debug: true,
           keySeparator: '.',
           nsSeparator: false,
         },
