@@ -57,7 +57,7 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
     : post.title;
 
   const description = isBookReview
-    ? `${t('book_summary')} ${t('description')} «${t('title')}». ${t(
+    ? `${t('book_summary')} ${t('seo_page_description')} «${t('title')}». ${t(
         'learn_key_ideas'
       )}`
     : post.excerpt;

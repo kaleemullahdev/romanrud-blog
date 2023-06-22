@@ -28,8 +28,7 @@ const Page: React.FC<
   const { t } = useTranslation(ns);
 
   const title = t('title');
-  const description = t('description');
-
+  const description = t('seo_page_description');
   return (
     <Layout title={title} description={description}>
       <Heading as="h2" variant="styles.h2">
